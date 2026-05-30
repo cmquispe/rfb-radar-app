@@ -9,10 +9,11 @@ const lifestyleData = {
   "Hyundai": [3, 4, 3, 4, 3, 3],
   "Kia": [3, 4, 3, 4, 3, 3],
   "Tesla": [2, 4, 2, 5, 3, 2],
-  "BYD": [3, 4, 3, 4, 3, 4],
+  "BYD": [3, 4, 3, 4, 3, 3],
   "BMW": [2, 4, 2, 3, 5, 2],
   "Mercedes": [2, 4, 2, 3, 5, 2]
 };
+
 
 document.getElementById("generateBtn").onclick = async () => {
   const brand = document.getElementById("brandSelect").value;
