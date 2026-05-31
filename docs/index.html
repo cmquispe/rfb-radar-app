@@ -94,18 +94,27 @@ document.getElementById("generateBtn").onclick = async () => {
   document.getElementById("brandSelect").value = defaultBrand;
   document.getElementById("generateBtn").click();
 };
-   // ⭐ Cambiar colores del título e insights a blanco
+ // ⭐ Cambiar colores del título e insights a blanco
 document.getElementById("title").style.color = "white";
 
 function applyWhiteStyles() {
   const insightsBox = document.getElementById("insightsResult");
   insightsBox.style.color = "white";
-  insightsBox.style.marginBottom = "10px"; // ⭐ Reduce espacio debajo del texto
+  insightsBox.style.marginTop = "10px";
+  insightsBox.style.marginBottom = "5px"; // ⭐ Reduce espacio debajo del texto
 }
 
 // ⭐ Ajustar alineación del radar hacia la derecha
-document.getElementById("radarResult").style.marginLeft = "40px";
-document.getElementById("radarResult").style.marginBottom = "10px"; // ⭐ Reduce espacio debajo del gráfico
+const radarBox = document.getElementById("radarResult");
+radarBox.style.marginLeft = "40px";
+radarBox.style.marginBottom = "5px"; // ⭐ Reduce espacio debajo del gráfico
+
+// ⭐ Ajustar alineación del bloque de insights generales (si existe)
+const generalInsights = document.getElementById("generalInsights");
+if (generalInsights) {
+  generalInsights.style.marginLeft = "40px";
+  generalInsights.style.color = "white";
+}
 
 // ⭐ Generar un radar por defecto al cargar la página
 window.onload = () => {
@@ -116,6 +125,7 @@ window.onload = () => {
   // Aplicar estilos blancos después de generar el radar
   setTimeout(applyWhiteStyles, 500);
 };
+
  
   
       </script>
