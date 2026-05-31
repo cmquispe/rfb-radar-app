@@ -15,7 +15,7 @@
 </head>
 <body>
 
-  <h2>Car Lifestyle Radar</h2>
+  <h2>id="title">Car Lifestyle Radar</h2>
 
   <select id="brandSelect">
     <option value="">Select a brand</option>
@@ -94,6 +94,29 @@ document.getElementById("generateBtn").onclick = async () => {
   document.getElementById("brandSelect").value = defaultBrand;
   document.getElementById("generateBtn").click();
 };
+   // ⭐ Cambiar colores del título e insights a blanco
+document.getElementById("title").style.color = "white";
+
+function applyWhiteStyles() {
+  const insightsBox = document.getElementById("insightsResult");
+  insightsBox.style.color = "white";
+  insightsBox.style.marginBottom = "10px"; // ⭐ Reduce espacio debajo del texto
+}
+
+// ⭐ Ajustar alineación del radar hacia la derecha
+document.getElementById("radarResult").style.marginLeft = "40px";
+document.getElementById("radarResult").style.marginBottom = "10px"; // ⭐ Reduce espacio debajo del gráfico
+
+// ⭐ Generar un radar por defecto al cargar la página
+window.onload = () => {
+  const defaultBrand = "Toyota";  // Cambia si quieres otra marca
+  document.getElementById("brandSelect").value = defaultBrand;
+  document.getElementById("generateBtn").click();
+
+  // Aplicar estilos blancos después de generar el radar
+  setTimeout(applyWhiteStyles, 500);
+};
+ 
   
       </script>
 
