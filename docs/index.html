@@ -89,6 +89,12 @@ document.getElementById("generateBtn").onclick = async () => {
   document.getElementById("radarResult").innerHTML =
     `<img src="https://rfb-radar-app.onrender.com/radar-image?${Date.now()}" style="max-width:500px;">`;
 };
+  window.onload = () => {
+  const defaultBrand = "Toyota";
+  document.getElementById("brandSelect").value = defaultBrand;
+  document.getElementById("generateBtn").click();
+};
+  
       </script>
 
 </body>
